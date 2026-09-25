@@ -13,7 +13,7 @@ primeiro_segmento = int(input('Primeiro segmento: '))
 segundo_segmento = int(input('Segundo segmento: '))
 terceiro_segmento = int(input('Terceiro segmento: '))
 
-if primeiro_segmento < segundo_segmento  + terceiro_segmento and segundo_segmento < primeiro_segmento + terceiro_segmento and terceiro_segmento < primeiro_segmento + segundo_segmento:
+if primeiro_segmento + segundo_segmento > terceiro_segmento and primeiro_segmento + terceiro_segmento > segundo_segmento and segundo_segmento + terceiro_segmento > primeiro_segmento:
     print('Os segmentos acima PODEM FORMAR um triângulo ', end='')
     if primeiro_segmento == segundo_segmento == terceiro_segmento:
         print('EQUILÁTERO')
