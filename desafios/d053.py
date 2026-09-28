@@ -12,9 +12,13 @@ print('DETECTOR DE PALÍNDROMO')
 
 frase = input('Digite uma frase: ').strip().upper()
 frase_limpa = frase.replace(' ', '')
-print(f'O inveso de {frase_limpa} é {frase_limpa[::-1]}')
+inverso = ''
 
-if frase_limpa[::-1] == frase_limpa:
+for i in range(len(frase_limpa) - 1, -1, -1):
+    inverso += frase_limpa[i]
+
+print(f'O inveso de {frase_limpa} é {inverso}')
+if frase_limpa == inverso:
     print('Temos um palíndromo')
 else:
     print('A frase digitada não é um palíndromo!')
