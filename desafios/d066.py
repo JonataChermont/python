@@ -1,0 +1,21 @@
+
+"""
+    Crie um programa que leia vários números pelo teclado.
+    O programa só vai parar quando o usuário digitar o valor 999,
+    que é a condição de parada. No final, mostre quantos números
+    foram digitados e qual foi a soma entre eles (desconsidere o flag).
+"""
+print('VÁRIOS NÚMEROS COM FLAG')
+
+numero = 0
+contador = 0
+soma = numero
+
+while True:
+    numero = int(input('Digite um valor [999 para parar]: '))
+    if numero == 999:
+        break
+    soma += numero
+    contador += 1
+
+print(f'A soma dos {contador} valores foi {soma}!')
