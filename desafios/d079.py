@@ -13,20 +13,24 @@ print(f"║{titulo:^33}║")
 print(f"╚{borda}╝")
 
 numeros = list()
-while True:
-    novo_numero = int(input('Digite um valor: '))
-    numeros.append(novo_numero)
-    for i in range(1, len(numeros)):
-        if novo_numero == numeros[i]:
-            print('Valor duplicado! Não vou adicionar...')
-        else:
-            print('Valor adicionado com sucesso...')
+novo_numero = int(input('Digite um valor: '))
+numeros.append(novo_numero)
+continuar = input('Quer continuar ? [S/N]: ').strip().upper()
 
-    continuar = input('Quer continuar ? [S/N]: ').strip().upper()
+while True:
     while continuar not in 'SN':
         continuar = input('Quer continuar ? [S/N]: ').strip().upper()
     else:
         if 'N' in continuar:
-            print('═' * 35)
-            print(f'Voçê digitou os valores {', '.join(map(str, numeros))}.')
             break
+        else:
+            novo_numero = int(input('Digite um valor: '))
+            while novo_numero in numeros:
+                print('Valor duplicado! Não vou adcionar')
+                novo_numero = int(input('Digite um valor: '))
+            else:
+                numeros.append(novo_numero)
+                continuar = input('Quer continuar ? [S/N]: ').strip().upper()
+
+print('═' * 35)
+print(f'Voçê digitou os números {', '.join(map(str, numeros))}.')
