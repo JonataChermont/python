@@ -6,7 +6,7 @@
 titulo = "DICIONARIO EM PYTHON"
 print(f"{"=" * (len(titulo) * 2)}\n{titulo:^40}\n{"=" * (len(titulo) * 2)}")
 
-aluno = dict()
+aluno = {}
 
 while True:
     nome = str(input('Nome: ')).strip().title()
@@ -29,7 +29,7 @@ print("-=" * len(titulo))
 
 print(f" - nome é igual a {aluno['nome']}")
 print(f" - média é igual a {aluno['media']}")
-print(f" - situação é igual a", end=' ')
+print(" - situação é igual a", end=' ')
 if aluno["media"] < 7:
     print("RECUPERAÇÃO")
 else:

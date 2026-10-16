@@ -8,7 +8,7 @@ from datetime import date
 titulo = "CADASTRO DE TRABALHADOR"
 print(f"{"=" * (len(titulo) * 2)}\n{titulo:^46}\n{"=" * (len(titulo) * 2)}")
 
-pessoa_cadastrada = dict()
+pessoa_cadastrada = {}
 ano_atual = date.today().year
 
 while True:
@@ -28,7 +28,7 @@ while True:
             elif nascimento > ano_atual:
                 print(f"Não tem como você ter nascido depois de {ano_atual}")
             else:
-                print(f"Você não é tão velho assim")
+                print("Você não é tão velho assim")
         except ValueError:
             print("Ano de nascimento inválido!")
 

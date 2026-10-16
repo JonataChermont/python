@@ -6,7 +6,7 @@
 titulo = 'BOLETIM ESCOLAR'
 print(f'{'-' * (len(titulo) * 2)}\n{titulo:^30}\n{'-' * (len(titulo) * 2)}')
 
-alunos = list()
+alunos = []
 dados = []
 media = 0
 
